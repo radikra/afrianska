@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
     <title>DE HomePage</title>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -12,30 +13,38 @@
     <header class="header">
         <nav class="header__nav">
             <div class="header__logo">
-                <svg height="3rem">
+                <svg>
                     <use xlink:href="./icons/de-icons.svg#logo-dark" />
                 </svg>
             </div>
             <nav class="header__menu hide-menu">
                 <ul>
                     <li><a href="#!">About</a></li>
-                    <li><a href="#!">What We Do</a></li>
-                    <li><a href="#!">Project</a></li>
-                    <li><a href="#!">How It Work</a></li>
+                    <li><a href="#wedo">What We Do</a></li>
+                    <li><a href="#clients">Project</a></li>
+                    <li><a href="#howItWork">How It Work</a></li>
                 </ul>
             </nav>
-            <div class="header__burger" onclick="document.querySelector('.header__menu').classList.toggle('hide-menu');">
-                <svg height="2rem">
+            <div class="header__burger">
+                <svg>
                     <use xlink:href="./icons/de-icons.svg#menu" />
                 </svg>
             </div>
         </nav>
         <div class="header__desc description">
             <h1 class="header__title">New Automation Tool for Your Home</h1>
+            <div class="header__pic">
+                <picture>
+                    <source media="(max-width: 768px)" srcset='../img/illustration.png'>
+                    <img src="./img/illustration.png" alt="Smart home">
+                </picture>
+            </div>
             <p class="header__subtitle description__subtitle">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.
             </p>
-            <a href="#!" class="header__action description__action">See Our Project</a>
+            <div class="header__action">
+                <a href="#clients" class="description__action">See Our Project</a>
+            </div>
         </div>
     </header>
     <main>
@@ -43,7 +52,7 @@
             <div class="wrapper">
                 <div class="wedo">
                     <div class="wedo__title description">
-                        <h2 class="description__title">What we do to help our client grow in digital era,</h2>
+                        <h2 class="description__title">What we do to help our client grow in digital era</h2>
                     </div>
                     <div class="wedo__items">
                         <div class="item">
@@ -54,10 +63,12 @@
                             <h3 class="item__title">Bring Technology To Your Comfrotable Home</h3>
                             <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <p class="item__link">
-                                <a href="#!">Learn more</a>
-                                <svg height="16">
-                                    <use xlink:href="./icons/de-icons.svg#link-arrow" />
-                                </svg>
+                                <a href="#!">
+                                    <span>Learn more</span>
+                                    <svg>
+                                        <use xlink:href="./icons/de-icons.svg#link-arrow" />
+                                    </svg>
+                                </a>
                             </p>
                         </div>
                         <div class="item">
@@ -67,10 +78,12 @@
                             <h3 class="item__title">Make Your business To Be Better Famous In Internet</h3>
                             <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <p class="item__link">
-                                <a href="#!">Learn more</a>
-                                <svg height="16">
-                                    <use xlink:href="./icons/de-icons.svg#link-arrow" />
-                                </svg>
+                                <a href="#!">
+                                    <span>Learn more</span>
+                                    <svg>
+                                        <use xlink:href="./icons/de-icons.svg#link-arrow" />
+                                    </svg>
+                                </a>
                             </p>
                         </div>
                         <div class="item">
@@ -80,10 +93,12 @@
                             <h3 class="item__title">Build Your Digital Product That Suitable For Your Need</h3>
                             <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <p class="item__link">
-                                <a href="#!">Learn more</a>
-                                <svg height="16">
-                                    <use xlink:href="./icons/de-icons.svg#link-arrow" />
-                                </svg>
+                                <a href="#!">
+                                    <span>Learn more</span>
+                                    <svg>
+                                        <use xlink:href="./icons/de-icons.svg#link-arrow" />
+                                    </svg>
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -113,29 +128,32 @@
     </main>
     <footer>
         <div class="footer">
-            <div class="footer__talk">
-                <div class="footer__text description">
-                    <h2 class="description__title">
-                        Intersted to work<br />with our team?
-                    </h2>
-                    <p class="description__subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
+            <section id="howItWork">
+                <div class="footer__talk">
+                    <div class="footer__text description">
+                        <h2 class="description__title">
+                            Interested to work<br />with our team?
+                        </h2>
+                        <p class="description__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class="footer__action description">
+                        <a href="#!" id='talk' class="description__action js-modal-action">Let’s Talk</a>
+                    </div>
                 </div>
-                <div class="footer__action description">
-                    <a href="#!" class="description__action">Let’s Talk</a>
-                </div>
-            </div>
+            </section>
             <div class="footer__content">
-                <div class="footer__contacts">
+                <div class="footer__contacts fmenu">
                     <div class="contacts">
                         <div class="contacts__logo">
-                            <svg height="1.75rem">
+                            <svg>
                                 <use xlink:href="./icons/de-icons.svg#logo-light" />
                             </svg>
                         </div>
                         <div class="contacts__brand">Afrianska</div>
                     </div>
+                    <div class="fmenu__title">Contacts</div>
                     <dl>
                         <dt>A.</dt>
                         <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
@@ -144,7 +162,7 @@
                         <dt>E.</dt>
                         <dd><a href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a></dd>
                     </dl>
-                    <p class="footer__rights">2019 © Afrianska. All rights reserved.</p>
+
                 </div>
                 <div class="footer__menu fmenu">
                     <div class="fmenu__title">About US</div>
@@ -164,9 +182,34 @@
                         <li><a href="#!">Youtube</a></li>
                     </ul>
                 </div>
+                <p class="footer__rights">2019 © Afrianska. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <div id="talkModal" class="modal js-modal">
+        <div class="modal__wrapper">
+            <div class="modal__body">
+                <form action="#">
+                    <fieldset>
+                        <legend>SEND US MESSAGE</legend>
+
+                        <label for="userName">Full Name</label>
+                        <input type="text" name="userName" placeholder="Your name" autocomplete='off' autofocus required pattern="[A-Za-zА-Яа-яЁё\s]{3,}">
+
+                        <label for="userEmail">Email</label>
+                        <input type="email" name="userEmail" placeholder="Your Email" autocomplete='off' required disabled>
+
+                        <label for="userMessage">Message</label>
+                        <textarea name="userMessage" cols="30" rows="3" placeholder="Your Message" autocomplete='off' required pattern="[A-Za-zА-Яа-яЁё\s]{5,280}" disabled></textarea>
+
+                        <input type="reset" value="cancel" class="modal__reset show-btn">
+                        <input type="submit" value="submit" class="modal__submit">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
