@@ -207,6 +207,15 @@ body.lock {
         &__burger {
             z-index: 10;
         }
+        &__desc {
+            flex-direction: column;
+        }
+        &__subtitle {
+            max-width: 100%;
+        }
+        &__action {
+            max-width: 100%;
+        }
         &__menu {
             position: absolute;
             width: 100vw;
@@ -264,6 +273,12 @@ body.lock {
     @media (max-width: 768px) {
         &__action {
             margin-left: auto;
+        }
+    }
+    @media (max-width: 500px) {
+        &__action {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
