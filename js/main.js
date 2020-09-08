@@ -28,6 +28,8 @@ for (let menu of menus) {
     });
 }
 
+var modalWindow = document.getElementById('talkModal');
+
 // open modal
 var openModal = document.getElementById('talk');
 openModal.addEventListener('click', function(e) {
@@ -35,8 +37,6 @@ openModal.addEventListener('click', function(e) {
     modalWindow.classList.add('show-modal');
     document.querySelector('body').classList.add('lock');
 });
-
-var modalWindow = document.getElementById('talkModal');
 
 // close modal
 var resBtn = modalWindow.querySelector('input[type=reset]');
@@ -57,6 +57,7 @@ userName.addEventListener('input', () => {
         userEmail.removeAttribute('disabled');
     } else {
         userEmail.setAttribute('disabled', '');
+        userMessage.setAttribute('disabled', '');        
     }
 });
 
